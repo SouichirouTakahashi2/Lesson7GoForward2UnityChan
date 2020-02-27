@@ -18,9 +18,12 @@ public class CubeController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //衝突判定
-        if (collision.gameObject.name == "CubePrefab")
+       // if (collision.gameObject.tag == "CubeA")
 
-        {   //block音を出す
+            if (collision.gameObject.name == "CubePrefab(Clone)"|| collision.gameObject.name=="ground")
+
+
+            {   //block音を出す
             GetComponent<AudioSource>().Play();
         }
     }
